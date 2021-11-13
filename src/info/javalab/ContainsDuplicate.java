@@ -1,5 +1,6 @@
 package info.javalab;
 
+import java.util.Arrays;
 import java.util.HashSet;
 
 public class ContainsDuplicate {
@@ -14,6 +15,8 @@ public class ContainsDuplicate {
 
         System.out.println(String.valueOf(result));
 
+        System.out.println(String.valueOf(containsDuplicate.duplicatesBySort(testArray)));
+
     }
 
     public boolean duplicates(int[] nums){
@@ -24,6 +27,20 @@ public class ContainsDuplicate {
 
             if (numbers.contains(nums[i])) return true;
             numbers.add(nums[i]);
+        }
+
+        return false;
+
+    }
+
+    public boolean duplicatesBySort(int[] nums){
+
+        Arrays.sort(nums);
+
+        for(int i = 0; i < nums.length - 1; i++){
+
+            if (nums[i] == nums[i+1]) return true;
+
         }
 
         return false;
