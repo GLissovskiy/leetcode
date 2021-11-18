@@ -98,7 +98,7 @@ public class FizzBuzz {
                 resultList.add("FizzBuzz");
             } else if ( fizz == 3){
                 fizz = 0;
-                resultList.add("Fizz"); 
+                resultList.add("Fizz");
             } else if ( buzz == 5){
                 buzz = 0;
                 resultList.add("Buzz");
